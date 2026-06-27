@@ -2,7 +2,7 @@ const contadorEl = document.getElementById("contador");
 const birthdayEl = document.getElementById("birthday");
 const countdownEl = document.getElementById("countdown");
 
-const modoTeste = true;
+const modoTeste = false;
 
 const dataAniversario = new Date("2026-06-28T00:00:00");
 
