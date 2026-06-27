@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>📸</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery">
+
+<h1 class="titulo">Nossas poucas memórias</h1>
+
+<div class="grid">
+
+    <div class="polaroid">
+        <img src="assets/fotos/0.jpg" class="foto">
+        <p class="legenda">noi dois chupetinha</p>
+    </div>
+    <div class="polaroid">
+        <img src="assets/fotos/2.jpg" class="foto">
+        <p class="legenda">otra do msm dia</p>
+    </div>
+
+    <h2 class="legenda">(n consegui colocar mai foto descupa)</h2>
+
+</div>
+
+
+<div id="lightbox" class="hidden">
+    <img id="imgGrande">
+</div>
+
+<button onclick="irCarta()">Continuar 💌</button>
+
+<script src="flow.js"></script>
+<script>
+
+    document.querySelectorAll(".foto").forEach(f=>{
+
+    f.onclick=()=>{
+
+        document.getElementById("lightbox").classList.remove("hidden");
+
+        document.getElementById("imgGrande").src=f.src;
+
+    }
+
+    });
+
+    document.getElementById("lightbox").onclick=()=>{
+
+        document.getElementById("lightbox").classList.add("hidden");
+
+    }
+
+    function irCarta(){
+
+        liberar(4);
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(()=>{
+
+            window.location.href="carta.html";
+
+        },500);
+
+    }
+
+</script>
+
+</body>
+</html>
